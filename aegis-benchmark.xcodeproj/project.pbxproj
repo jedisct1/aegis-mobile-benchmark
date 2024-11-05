@@ -6,8 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		097EFD542CC6F40C006D364B /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 097EFD532CC6F40C006D364B /* Crypto */; };
+		097EFD562CC6F40C006D364B /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 097EFD552CC6F40C006D364B /* _CryptoExtras */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		097EFD342CC6CA15006D364B /* aegis-benchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aegis-benchmark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		097EFD512CC6D073006D364B /* aegis-benchmark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "aegis-benchmark-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097EFD542CC6F40C006D364B /* Crypto in Frameworks */,
+				097EFD562CC6F40C006D364B /* _CryptoExtras in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +42,7 @@
 			children = (
 				097EFD362CC6CA15006D364B /* aegis-benchmark */,
 				097EFD352CC6CA15006D364B /* Products */,
+				097EFD512CC6D073006D364B /* aegis-benchmark-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +74,8 @@
 			);
 			name = "aegis-benchmark";
 			packageProductDependencies = (
+				097EFD532CC6F40C006D364B /* Crypto */,
+				097EFD552CC6F40C006D364B /* _CryptoExtras */,
 			);
 			productName = "aegis-benchmark";
 			productReference = 097EFD342CC6CA15006D364B /* aegis-benchmark.app */;
@@ -94,6 +105,9 @@
 			);
 			mainGroup = 097EFD2B2CC6CA15006D364B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				097EFD522CC6F40C006D364B /* XCRemoteSwiftPackageReference "swift-crypto" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 097EFD352CC6CA15006D364B /* Products */;
 			projectDirPath = "";
@@ -177,7 +191,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -252,6 +266,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"aegis-benchmark/Preview Content\"";
+				DEVELOPMENT_TEAM = 888H8YF752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -263,10 +278,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/aegis-benchmark",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.pureftpd.ios.aegis-benchmark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "aegis-benchmark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -280,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"aegis-benchmark/Preview Content\"";
+				DEVELOPMENT_TEAM = 888H8YF752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -291,10 +312,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/aegis-benchmark",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.pureftpd.ios.aegis-benchmark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "aegis-benchmark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,6 +348,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		097EFD522CC6F40C006D364B /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		097EFD532CC6F40C006D364B /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 097EFD522CC6F40C006D364B /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+		097EFD552CC6F40C006D364B /* _CryptoExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 097EFD522CC6F40C006D364B /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = _CryptoExtras;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 097EFD2C2CC6CA15006D364B /* Project object */;
 }
